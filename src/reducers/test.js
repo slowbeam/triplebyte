@@ -1,7 +1,20 @@
-export default (state = 'unclicked', action) => {
+const defaultState = {
+  clicked: 'unclicked',
+  name: ''
+}
+
+export default (state = defaultState, action) => {
   switch(action.type) {
-    case 'SET_TEST':
-      return action.payload;
+    case 'SET_CLICKED':
+      return {
+        ...state,
+        clicked: action.payload
+      };
+    case 'SET_NAME':
+    return {
+      ...state,
+      name: action.payload
+    };
     default:
       return state;
   }

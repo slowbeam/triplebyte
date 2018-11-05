@@ -1,1 +1,2 @@
-export * from './test';
+export * from './clicked';
+export * from './name';
