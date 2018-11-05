@@ -1,2 +1,2 @@
-export * from './clicked';
-export * from './name';
+export * from "./clicked";
+export * from "./name";

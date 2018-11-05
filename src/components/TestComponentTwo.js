@@ -2,17 +2,9 @@ import React from "react";
 import { connect } from "react-redux";
 import * as actions from "../actions";
 
-class TestComponent extends React.Component {
+class TestComponentTwo extends React.Component {
   state = {
     name: ""
-  };
-
-  handleClick = () => {
-    if (this.props.clicked === "unclicked") {
-      this.props.setClicked("clicked");
-    } else {
-      this.props.setClicked("unclicked");
-    }
   };
 
   handleChange = event => {
@@ -29,8 +21,6 @@ class TestComponent extends React.Component {
   render() {
     return (
       <div>
-        <h1>Test: {this.props.clicked}</h1>
-        <button onClick={this.handleClick}>click me</button>
         <h1>Your Name: {this.props.name}</h1>
         <form>
           <label>
@@ -50,7 +40,6 @@ class TestComponent extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    clicked: state.test.clicked,
     name: state.test.name
   };
 };
@@ -58,4 +47,4 @@ const mapStateToProps = state => {
 export default connect(
   mapStateToProps,
   actions
-)(TestComponent);
+)(TestComponentTwo);

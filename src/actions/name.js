@@ -1,6 +1,6 @@
-export const setName = (payload) => {
+export const setName = payload => {
   return {
-    type: 'SET_NAME',
+    type: "SET_NAME",
     payload: payload
-  }
+  };
 };

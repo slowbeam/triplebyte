@@ -1,6 +1,6 @@
-export const setClicked = (payload) => {
+export const setClicked = payload => {
   return {
-    type: 'SET_CLICKED',
+    type: "SET_CLICKED",
     payload: payload
-  }
+  };
 };
