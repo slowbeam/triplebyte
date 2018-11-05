@@ -1,6 +1,13 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import * as actions from '../actions';
 
 class TestComponent extends React.Component {
+
+  handleClick = () => {
+
+  }
+
   render() {
     return (
 
@@ -8,4 +15,10 @@ class TestComponent extends React.Component {
   }
 };
 
-export default TestComponent;
+const mapStateToProps = state => {
+  return {
+    test: state.test
+  }
+}
+
+export default connect(mapStateToProps, actions)(TestComponent);
